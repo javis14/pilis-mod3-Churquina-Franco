@@ -39,7 +39,7 @@ const Formulario = () => {
 
   return (
     <div className="palette-new-container">
-      <span>Nueva ubicación:</span>
+      
       <form className="palette-form" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-palette-name-form"
@@ -50,7 +50,7 @@ const Formulario = () => {
           })}
         />
         {errors.placeName?.type === "required" && (
-          <span>Debe ingresar un nombre de la localización</span>
+          <span>Debe ingresar una ubicación</span>
         )}
         <input
           type="number"

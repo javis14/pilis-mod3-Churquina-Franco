@@ -11,24 +11,13 @@ const Navigation = () => {
         <div className="nav-links-container">
           {true ? (
             <Link className="nav-link" to="/location/create">
-              Nueva Paleta
+              New Location
             </Link>
           ) : (
-            <span className="nav-link">Nueva Paleta</span>
+            <span className="nav-link">New Location</span>
           )}
 
-          {!true ? (
-            <span
-              className="nav-link"
-              // onClick={handleSignOut}
-            >
-              Cerrar Sesión
-            </span>
-          ) : (
-            <Link className="nav-link sign-in" to="/login">
-              Iniciar Sesión
-            </Link>
-          )}
+ 
         </div>
       </div>{" "}
       <Outlet />

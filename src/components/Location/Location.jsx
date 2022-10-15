@@ -20,11 +20,11 @@ const Location = ({ location }) => {
   return (
     <div className='palette-container'>
       <div className='palette'>
-        <h3>{placeName}</h3>
-        <p> {Latitud} </p>
-        <p> {Longitud} </p>
-        <p> {Temperature} </p>
-        <p> {WindSpeed} </p>
+        <h3>Nombre del lugar :{placeName}</h3>
+        <p> Latitud :{Latitud} </p>
+        <p> Longitud :{Longitud} </p>
+        <p> Temperatura :{Temperature} </p>
+        <p> Velocidad del viento :{WindSpeed} </p>
       </div>
       <div className='palette-actions'>
 
