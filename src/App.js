@@ -1,31 +1,22 @@
-import './App.css';
-import Formulario from './components/Formulario';
-import Locations from './components/Location/Locations';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Formulario from "./routes/Location/Formulario";
+import Home from "./routes/Home/Home";
+import Navigation from "./routes/Navigation/Navigation";
 
-const testLocations = [
-  {
-    id: 1,
-    placeName: "Ledesma",
-    Latitud: "-24.45",
-    Longitud: "22.45",
-    Temperature: "24",
-    WindSpeed: "35.4",
-  },
-  {
-    id: 2,
-    placeName: "Ledesma",
-    Latitud: "-24.45",
-    Longitud: "22.45",
-    Temperature: "24",
-    WindSpeed: "35.4",
-  }
-]
+
+
 function App() {
-
   return (
     <div className="App">
-      <Locations dataLocations={testLocations}   />
+      <Routes>
+        <Route path='/' element={<Navigation />}>
+          <Route index element={<Home />}/>
+          <Route path='location/create' element={<Formulario />}/>
+        </Route>
+      </Routes>
     </div>
   );
 }
+
 export default App;

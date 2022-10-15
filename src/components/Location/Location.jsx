@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import "./Location.css";
 import { NewCardContext } from "../../context/NewCardContext";
+import { FcCancel } from "react-icons/fc";
 
 const Location = ({ location }) => {
   const { id, placeName, Latitud, Longitud, Temperature, WindSpeed } =
-   location;
+    location;
 
-   const {newCard, setNewCard} = useContext(NewCardContext);
+  const { newCard, setNewCard } = useContext(NewCardContext);
 
   const DeleteLocation = () => {
     const tempLocations = newCard.filter(
@@ -18,21 +19,22 @@ const Location = ({ location }) => {
 
   return (
     <div className='palette-container'>
-    <div className='palette'>
-      <h3>{placeName}</h3>
-      <p> {Latitud} </p>
-      <p> {Longitud} </p>
-      <p> {Temperature} </p>
-      <p> {WindSpeed} </p>
-    </div>
-    <div className='palette-actions'>
-      <div className='btn-see-more' onClick={DeleteLocation}>
-        <p>Delete </p>
+      <div className='palette'>
+        <h3>{placeName}</h3>
+        <p> {Latitud} </p>
+        <p> {Longitud} </p>
+        <p> {Temperature} </p>
+        <p> {WindSpeed} </p>
       </div>
-      
-    </div>
+      <div className='palette-actions'>
 
-  </div>
+        <div className='btn-see-more' onClick={DeleteLocation}>
+          <p>Delete <FcCancel /> </p>
+        </div>
+
+      </div>
+
+    </div>
   );
 };
 
