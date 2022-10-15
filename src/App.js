@@ -1,13 +1,13 @@
-/* import Login from './routes/Login/Login'; */
 import './App.css';
-import Cards
- from './components/Card/Card';
+import Formulario from './components/Formulario';
+
 function App() {
 
+  
   return (
-      <div className='App'>
-        <Cards/>
-      </div>
+    <div className="App">
+      <Formulario />
+    </div>
   );
 }
 
